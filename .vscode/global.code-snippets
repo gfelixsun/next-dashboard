@@ -1,0 +1,95 @@
+{
+  "import": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "im",
+    "body": ["import { $2 } from '$1';"],
+    "description": "Import a module"
+  },
+  "import-default": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "imd",
+    "body": ["import $1 from '$2';"],
+    "description": "Import default module"
+  },
+  "export-all": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ex",
+    "body": ["export * from '$1';"],
+    "description": "Export all from module"
+  },
+  "react-component": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "rfc",
+    "body": [
+      "interface ${1:ComponentName}Props {",
+      "  $2",
+      "}",
+      "",
+      "export function ${1:ComponentName}({ $3 }: ${1:ComponentName}Props) {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "}"
+    ],
+    "description": "Create a React functional component with TypeScript"
+  },
+  "react-hook-usestate": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "useS",
+    "body": ["const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState<$2>($3);"],
+    "description": "React useState hook"
+  },
+  "react-hook-useeffect": {
+    "scope": "typescriptreact,javascriptreact",
+    "prefix": "useE",
+    "body": [
+      "useEffect(() => {",
+      "  $1",
+      "  return () => {",
+      "    $2",
+      "  };",
+      "}, [$3]);"
+    ],
+    "description": "React useEffect hook"
+  },
+  "nextjs-api-route": {
+    "scope": "typescript,javascript",
+    "prefix": "napi",
+    "body": [
+      "import type { NextApiRequest, NextApiResponse } from 'next';",
+      "",
+      "export default function handler(",
+      "  req: NextApiRequest,",
+      "  res: NextApiResponse",
+      ") {",
+      "  try {",
+      "    if (req.method === '${1:GET}') {",
+      "      $2",
+      "      return res.status(200).json({ success: true });",
+      "    }",
+      "",
+      "    return res.status(405).json({ error: 'Method not allowed' });",
+      "  } catch (error) {",
+      "    console.error(error);",
+      "    return res.status(500).json({ error: 'Internal server error' });",
+      "  }",
+      "}"
+    ],
+    "description": "Next.js API route template"
+  },
+  "nextjs-getserversideprops": {
+    "scope": "typescriptreact",
+    "prefix": "gssp",
+    "body": [
+      "export const getServerSideProps = (async (context) => {",
+      "  $1",
+      "  return {",
+      "    props: {},",
+      "  };",
+      "}) satisfies GetServerSideProps;"
+    ],
+    "description": "Next.js getServerSideProps"
+  }
+}

@@ -1,0 +1,340 @@
+{
+  // Tailwind CSS 配置文件路径，指定 Tailwind CSS 的配置文件位置
+  "tailwindCSS.experimental.configFile": "internal/tailwind-config/src/index.ts",
+
+  // Workbench 工作台相关设置
+  // 列表平滑滚动，启用后列表滚动更流畅
+  "workbench.list.smoothScrolling": true,
+  // 启动时打开新建未命名文件
+  "workbench.startupEditor": "newUntitledFile",
+  // 树视图缩进大小，控制文件资源管理器中树的缩进宽度
+  "workbench.tree.indent": 10,
+  // 编辑器中修改过的标签页高亮显示
+  "workbench.editor.highlightModifiedTabs": true,
+  // 删除文件时关闭对应编辑器标签页
+  "workbench.editor.closeOnFileDelete": true,
+  // 启用编辑器标签页数量限制
+  "workbench.editor.limit.enabled": true,
+  // 每个编辑器组的标签页数量限制启用
+  "workbench.editor.limit.perEditorGroup": true,
+  // 每个编辑器组最多显示5个标签页
+  "workbench.editor.limit.value": 5,
+  // 工作台颜色主题，设置界面配色
+  "workbench.colorTheme": "One Dark Pro",
+  // 图标主题，控制文件和文件夹图标样式
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Editor 编辑器相关设置
+  // 缩进大小为2个空格
+  "editor.tabSize": 2,
+  // 禁用自动检测缩进，使用固定的 tabSize
+  "editor.detectIndentation": false,
+  // 光标闪烁样式为 expand，光标扩展样式
+  "editor.cursorBlinking": "expand",
+  // 启用大文件优化，提升大文件编辑性能
+  "editor.largeFileOptimizations": true,
+  // 关闭辅助功能支持，提升性能
+  "editor.accessibilitySupport": "off",
+  // 启用光标平滑动画
+  "editor.cursorSmoothCaretAnimation": "on",
+  // 括号对引导线激活状态显示
+  "editor.guides.bracketPairs": "active",
+  // 启用内联建议功能
+  "editor.inlineSuggest.enabled": true,
+  // 自动补全时优先选择最近使用的匹配项
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  // 按 Enter 键时智能接受建议
+  "editor.acceptSuggestionOnEnter": "smart",
+  // 允许代码片段与快速建议同时显示
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // 启用代码粘滞滚动功能，方便查看上下文
+  "editor.stickyScroll.enabled": true,
+  // 鼠标悬停时启用粘滞提示，提示框固定显示
+  "editor.hover.sticky": true,
+  // 插入建议时替换当前文本
+  "editor.suggest.insertMode": "replace",
+  // 启用括号对颜色高亮
+  "editor.bracketPairColorization.enabled": true,
+  // 自动闭合括号，闭合前置空白字符
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  // 删除时自动闭合括号同时删除
+  "editor.autoClosingDelete": "always",
+  // 输入时自动覆盖闭合括号
+  "editor.autoClosingOvertype": "always",
+  // 自动闭合引号，闭合前置空白字符
+  "editor.autoClosingQuotes": "beforeWhitespace",
+  // 单词分隔符定义，控制双击选中单词的范围
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  // 保存时自动执行代码操作，如修复 ESLint、Stylelint 问题
+  "editor.codeActionsOnSave": {
+    // 显式修复所有 ESLint 问题
+    "source.fixAll.eslint": "explicit",
+    // 显式修复所有 Stylelint 问题
+    "source.fixAll.stylelint": "explicit",
+    // 保存时不自动整理导入
+    "source.organizeImports": "never"
+  },
+  // "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化工具，已注释
+  // 保存时自动格式化代码
+  "editor.formatOnSave": true,
+  // 快速建议设置，控制代码补全提示的触发时机
+  "editor.quickSuggestions": {
+    "other": "on", // 其他代码正常触发补全
+    "comments": "off", // 注释中不触发补全
+    "strings": "on" // 字符串中触发补全
+  },
+
+  // 语言特定格式化工具设置
+  "[javascript]": {
+    // JavaScript 使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    // TypeScript 使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    // JavaScript React 使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    // TypeScript React 使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    // JSON 文件使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    // JSONC 文件使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    // Markdown 文件使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    // HTML 文件使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    // CSS 文件使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    // SCSS 文件使用 Prettier 格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Extensions 扩展相关设置
+  // 忽略扩展推荐，避免弹出安装提示
+  "extensions.ignoreRecommendations": true,
+
+  // Terminal 终端相关设置
+  // 终端光标闪烁
+  "terminal.integrated.cursorBlinking": true,
+  // 关闭终端会话恢复进程
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  // 启用终端标签页功能
+  "terminal.integrated.tabs.enabled": true,
+  // 终端滚动缓冲区大小，保存10000行历史
+  "terminal.integrated.scrollback": 10000,
+  // 启用终端粘滞滚动，方便查看输出
+  "terminal.integrated.stickyScroll.enabled": true,
+  // 终端字体，优先使用 FiraCode Nerd Font
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Cascadia Code', Consolas, 'Courier New', monospace",
+
+  // Files 文件相关设置
+  // 文件换行符为 LF
+  "files.eol": "\n",
+  // 保存时自动添加文件末尾换行符
+  "files.insertFinalNewline": true,
+  // 启用简单文件对话框
+  "files.simpleDialog.enable": true,
+  // 文件关联配置，指定特定扩展名对应语言模式
+  "files.associations": {
+    "*.ejs": "html", // EJS 文件作为 HTML 处理
+    "**/tsconfig.json": "jsonc", // tsconfig.json 作为 JSONC 处理，支持注释
+    "*.json": "jsonc", // JSON 文件使用 JSONC 模式
+    "package.json": "json" // package.json 作为标准 JSON
+  },
+  // 文件排除配置，隐藏特定文件和文件夹
+  "files.exclude": {
+    "**/.eslintcache": true, // 隐藏 ESLint 缓存文件
+    "**/.turbo": true, // 隐藏 Turbo 缓存文件夹
+    "**/.idea": true, // 隐藏 JetBrains IDE 配置文件夹
+    "**/tmp": true, // 隐藏临时文件夹
+    "**/.git": true, // 隐藏 Git 版本控制文件夹
+    "**/.svn": true, // 隐藏 SVN 版本控制文件夹
+    "**/.hg": true, // 隐藏 Mercurial 版本控制文件夹
+    "**/CVS": true, // 隐藏 CVS 版本控制文件夹
+    "**/.stylelintcache": true, // 隐藏 Stylelint 缓存文件
+    "**/.DS_Store": true, // 隐藏 macOS 系统文件
+    "**/dist": true, // 隐藏构建输出文件夹
+    "**/node_modules": true // 隐藏依赖文件夹
+  },
+  // 文件监视排除，避免监视无关文件提升性能
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/.next/**": true
+  },
+
+  // TypeScript 相关设置
+  // 排除不需要 tsserver 处理的文件夹
+  "typescript.tsserver.exclude": ["**/node_modules", "**/dist", "**/.turbo"],
+  // 启用枚举成员值的内联提示
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  // 优先使用类型导入
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  // 包含 package.json 中的自动导入
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  // 文件移动时自动更新导入路径
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // 指定 TypeScript SDK 路径
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Search 搜索相关设置
+  // 搜索编辑器单击行为为预览定义
+  "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  // 搜索时不跟随符号链接
+  "search.followSymlinks": false,
+  // 搜索排除配置，忽略特定文件夹和文件
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.next": true,
+    "**/.git": true,
+    "**/.vscode": false,
+    "**/yarn.lock": true,
+    "**/pnpm-lock.yaml": true
+  },
+
+  // Debug 调试相关设置
+  // 任务出错时自动进入调试模式
+  "debug.onTaskErrors": "debugAnyway",
+  // 差异编辑器忽略修剪空白差异
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // NPM 包管理器设置，指定使用 pnpm
+  "npm.packageManager": "pnpm",
+
+  // CSS/LESS/SCSS 验证设置，关闭内置验证以避免冲突
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // Emmet 代码片段相关设置
+  // 显示 Emmet 建议为代码片段
+  "emmet.showSuggestionsAsSnippets": true,
+  // 禁止 Tab 键触发 Emmet 展开，避免与其他快捷键冲突
+  "emmet.triggerExpansionOnTab": false,
+  // 指定 Emmet 支持的语言映射
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // Error Lens 错误提示相关设置
+  // 启用警告和错误级别的诊断高亮
+  "errorLens.enabledDiagnosticLevels": ["warning", "error"],
+  // 排除拼写检查来源的提示
+  "errorLens.excludeBySource": ["cSpell"],
+
+  // Stylelint 样式检查相关设置
+  // 启用 Stylelint
+  "stylelint.enable": true,
+  // 指定 Stylelint 使用的包管理器
+  "stylelint.packageManager": "pnpm",
+  // Stylelint 验证的文件类型
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  // 使用 postcss 作为自定义语法解析器
+  "stylelint.customSyntax": "postcss",
+
+  // ESLint 代码检查相关设置
+  // ESLint 验证的语言列表
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "html",
+    "markdown",
+    "json",
+    "jsonc"
+  ],
+  // 指定 ESLint 使用的包管理器
+  "eslint.packageManager": "pnpm",
+  // 显示 ESLint 文档的代码操作
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  // ESLint 工作目录配置，自动识别和指定当前目录
+  "eslint.workingDirectories": [{ "mode": "auto" }, { "directory": "./" }],
+
+  // Tailwind CSS 实验性类名正则匹配配置
+  // 忽略数组内部正则表达式内容，不做注释
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["tw`([^`]*)`", "([^`]*)"],
+    ["tw\\s*`([^`]*)`", "([^`]*)"]
+  ],
+  // Tailwind CSS 支持的语言映射
+  "tailwindCSS.includeLanguages": {
+    "typescript": "typescriptreact",
+    "javascript": "javascriptreact"
+  },
+
+  // GitHub Copilot 设置
+  // 启用 Copilot 的语言范围配置
+  "github.copilot.enable": {
+    "*": true, // 全局启用
+    "markdown": true, // Markdown 中启用
+    "plaintext": false, // 纯文本中禁用
+    "yaml": false // YAML 中禁用
+  },
+
+  // CSS 变量查找文件配置，支持 CSS 和 SCSS 文件
+  "cssVariables.lookupFiles": ["**/*.css", "**/*.scss"],
+
+  // 文件嵌套功能相关设置
+  // 启用文件嵌套功能
+  "explorer.fileNesting.enabled": true,
+  // 禁止自动展开嵌套文件
+  "explorer.fileNesting.expand": false,
+  // 文件嵌套规则，忽略数组内部正则表达式内容，不做注释
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).test.ts, $(capture).test.tsx, $(capture).spec.ts, $(capture).spec.tsx, $(capture).d.ts",
+    "*.tsx": "$(capture).test.ts, $(capture).test.tsx, $(capture).spec.ts, $(capture).spec.tsx, $(capture).d.ts",
+    "*.env": "$(capture).env.*",
+    "next.config.js": "next.config.*",
+    "package.json": "pnpm-lock.yaml, package-lock.json, yarn.lock, .npmrc, .gitignore",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+
+  // 拼写检查词汇表，添加常用技术词汇避免误报
+  "cSpell.words": [
+    "nextjs",
+    "tsconfig",
+    "middleware",
+    "vercel",
+    "postcss",
+    "tailwindcss",
+    "eslint",
+    "stylelint",
+    "pnpm",
+    "turbopack"
+  ],
+
+  // React/Next.js 相关特定设置
+  // JavaScript 文件移动时自动更新导入路径
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // TypeScript 导入模块使用相对路径
+  "typescript.preferences.importModuleSpecifier": "relative",
+  // 启用 TypeScript 代码参考的 CodeLens
+  "typescript.referencesCodeLens.enabled": true,
+  // 启用 TypeScript 自动导入建议
+  "typescript.suggest.autoImports": true
+}

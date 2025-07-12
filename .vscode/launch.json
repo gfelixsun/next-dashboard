@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Debug Server + Client",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack://_N_E/./*": "${webRoot}/*",
+        "webpack:///./*": "${webRoot}/*"
+      },
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Next.js: Debug Server",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 9229,
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Next.js: Debug API Routes",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "--inspect",
+        "${workspaceFolder}/node_modules/next/dist/bin/next",
+        "dev"
+      ],
+      "port": 9229,
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Next.js: Debug Test",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["test"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Attach to Next.js",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "skipFiles": ["<node_internals>/**"],
+      "restart": true,
+      "sourceMaps": true
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Next.js: Full Debug",
+      "configurations": [
+        "Next.js: Debug Server",
+        "Next.js: Debug Server + Client"
+      ]
+    }
+  ]
+}
