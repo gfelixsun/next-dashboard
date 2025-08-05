@@ -1,19 +1,32 @@
 import { useState } from 'react'
+import type { Message } from '@/app/chat/types/message'
 
 type Props = {
-  onSend: (text: string) => void
+  onSend: (msg: Message) => void
 }
 
 export default function ChatInput({ onSend }: Props) {
   const [input, setInput] = useState('')
-  const fn = () => {}
-  fn()
-  console.log(123)
-  const handleSend = () => {
+
+  const handleSend = async () => {
     if (!input.trim()) return
-    onSend(input.trim())
+
+    // 用户输入加对话
+    const sendParams = { role: 'user' as const, content: input }
+    onSend(sendParams)
     setInput('')
+
+    // TODO：后续加接口请求
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: [sendParams] })
+    })
+
+    const data = await res.json()
+    onSend({ role: 'assistant', content: data.reply || '[No reply]' })
   }
+
   return (
     <div className="flex items-center space-x-2 mt-4">
       <input
